@@ -1,7 +1,6 @@
 package com.skillsup.soccer.db.entity;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 
 @Entity
 @Table(name = "players")
@@ -17,11 +16,16 @@ public class PlayerEntity {
     @Column(name = "position", nullable = false)
     private String position;
 
-    public PlayerEntity(){
+    public PlayerEntity() {
 
     }
 
-    public PlayerEntity(Long id, String name, String position){
+    public PlayerEntity(String name, String position) {
+        this.name = name;
+        this.position = position;
+    }
+
+    public PlayerEntity(Long id, String name, String position) {
         this.id = id;
         this.name = name;
         this.position = position;
@@ -42,9 +46,8 @@ public class PlayerEntity {
     @Override
     public String toString() {
         return "PlayerEntity{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", position='" + position + '\'' +
-                "}\n";
+                "id=" + id + ", name='" +
+                "" + name + '\'' +
+                ", position='" + position + '\'' + "}\n";
     }
 }

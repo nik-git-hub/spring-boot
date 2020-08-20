@@ -1,6 +1,5 @@
 package com.skillsup.soccer.db.entity;
 
-
 import javax.persistence.*;
 import java.util.List;
 
@@ -29,7 +28,7 @@ public class TeamEntity {
     public TeamEntity() {
     }
 
-    public TeamEntity(Long id, String name, String country, String city, List<PlayerEntity> plaeyrEntities) {
+    public TeamEntity(Long id, String name, String country, String city, List<PlayerEntity> playerEntities) {
         this.id = id;
         this.name = name;
         this.country = country;
@@ -37,7 +36,7 @@ public class TeamEntity {
         this.playerEntities = playerEntities;
     }
 
-    public TeamEntity(String name, String country, String city, List<PlayerEntity> plaeyrEntities) {
+    public TeamEntity(String name, String country, String city, List<PlayerEntity> playerEntities) {
         this.name = name;
         this.country = country;
         this.city = city;
